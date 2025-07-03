@@ -20,7 +20,7 @@ describe("getAPIKey", () => {
 
   it("returns null if authorization does not start with 'ApiKey'", () => {
     const headers: IncomingHttpHeaders = {
-      authorization: "ApiKey some-token",
+      authorization: "Bearer some-token",
     };
     const result = getAPIKey(headers);
     expect(result).toBeNull();
